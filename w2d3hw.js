@@ -75,7 +75,7 @@ class PostalWorker extends Person {
     changeType(newType){
         this.type = newType;
     }
-
+    
 
 }
 

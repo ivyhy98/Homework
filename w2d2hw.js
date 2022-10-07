@@ -60,8 +60,28 @@ class Pirate {
 }
 
 // instantiate 2 arraysof 3 pirates, name the arrays after your favorite pirate ships, jollyRoger and blackPearl
- 
+ const jollyRoger =[
+  new Pirate('Emmanuel', 'First Ever', false ),
+  new Pirate('Black Sam Bellamy', 'Wealthy 53', false ),
+  new Pirate('Edward England', 'Treasure Finder', true ),
+ ]
+
+ const blackPearl = [
+  new Pirate('Jack Sparrow', 'Black Pearl', false ),
+  new Pirate('Hector Barbossa', 'Black Pearl', false ),
+  new Pirate('Davy Jones', 'Black Pearl', true ),
+ ]
 // loop over each array and print 3 properties of each pirate
+
+const loops = (arr)=>{
+  arr.forEach((pirate)=>{
+    console.log(pirate.name, pirate.shipName, pirate.hasPatch);
+  })
+}
+
+loops(jollyRoger);
+loops(blackPearl);
+
 
 
 
