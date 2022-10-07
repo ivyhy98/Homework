@@ -80,7 +80,7 @@ const loops = (arr)=>{
 }
 
 loops(jollyRoger);
-loops(blackPearl);
+loops(blackPearl);                            
 
 
 
