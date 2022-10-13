@@ -94,3 +94,30 @@ timmy.eat(2);
 timmy.exercise(2)
 
 console.log(timmy);
+// ======== CHEF MAKE DINNERS ========
+
+class Dinner{
+    constructor(appetizer, entree, dessert){
+        this.appetizer = appetizer;
+        this.entree = entree;
+        this.dessert = dessert;
+    }
+}
+class Chef{
+    constructor(name){
+        this.name = name;
+        this.dinners = [];
+    }
+    cook(app, entree, dessert){
+        let dinner = new Dinner(app,entree,dessert);
+        this.dinners.push(dinner);
+    }
+}
+
+const chef = new Chef('Ivana')
+
+chef.cook('Gator Tails', 'Steak', 'Choco Chip Cookie');
+chef.cook('None', 'Mac+Cheese w/ chicken', 'cheescake');
+chef.cook('Salad', 'Chicken Alfredo', 'Brownie Sundae');
+
+console.log(chef.dinners); 
