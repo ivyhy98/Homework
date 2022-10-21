@@ -67,19 +67,14 @@ const blogPost = document.querySelectorAll('.blog-post');
 blogPost.forEach((element)=>{
   element.addEventListener('mouseenter', (evt)=>{
       evt.preventDefault();
-      if(evt.target.classList.contains('purple')){
-        evt.target.classList.remove('purple');
-        evt.target.classList.add('red');
-      }
-      console.log('mouse in')
+      evt.target.classList.toggle('purple');
+      evt.target.classList.toggle('red');
   })
 
   element.addEventListener('mouseout', (evt)=>{
       evt.preventDefault();
-      if(evt.target.classList.contains('red')){
-        evt.target.classList.remove('red');
-        evt.target.classList.add('purple');
-      }
+      evt.target.classList.toggle('purple');
+      evt.target.classList.toggle('red');
   })
 
 })
