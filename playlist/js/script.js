@@ -56,6 +56,8 @@ const headingDesc = document.querySelector('#description');
 const songName = document.querySelector('.song-name');
 const songArtist = document.querySelector('.song-artist');
 const changeButton = document.querySelector('.change-song');
+const image = document.querySelector('img');
+
 playlists.forEach((element)=>{
         const liEl = document.createElement('li');
         liEl.classList.add('playlist');
@@ -126,6 +128,8 @@ ulEl.addEventListener('click',(evt)=>{
 function clickedSong(song){
     songName.textContent = `${song.name}`;
     songArtist.textContent = `${song.artist}`;
+    image.removeAttribute('src');
+    image.setAttribute('src', song.imageLink);
 }
 
 //change Song function
